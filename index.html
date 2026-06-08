@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛠</text></svg>">
+<meta name="theme-color" content="#0d1117">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Convert text to binary and binary to text. Supports UTF-8, ASCII, and hex representations.">
     <meta name="keywords" content="binary to text, text to binary, binary converter, ASCII, UTF-8 binary">
     <meta property="og:title" content="Binary ↔ Text — DevKit Tools">
@@ -151,6 +153,9 @@
             font-weight: 500;
         }
     </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Binary Text Converter","description":"Convert text to binary and binary to text. Supports UTF-8, ASCII, and hex representations.","url":"https://479464887-rgb.github.io/binary-text-converter/","applicationCategory":"DeveloperApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
 </head>
 <body>
     <div class="header">
@@ -180,7 +185,7 @@
 <button id="copy-bin" style="margin-top:8px;">Copy</button>
 
             <script>
-
+'use strict';
 const input = document.getElementById('bin-input');
 const output = document.getElementById('bin-output');
 const toBinary = document.getElementById('to-binary');
@@ -212,8 +217,7 @@ document.getElementById('copy-bin').addEventListener('click', () => {
 });
 input.value = 'Hello World';
 convert();
-
-            </script>
+</script>
             </div>
         </div>
     </div>
@@ -223,13 +227,14 @@ convert();
         © 2026 DevKit Tools
     </div>
     <script>
-    function copyText(text, btn) {
+'use strict';
+function copyText(text, btn) {
         navigator.clipboard.writeText(text).then(() => {
             var orig = btn.textContent;
             btn.textContent = 'Copied!';
             setTimeout(() => btn.textContent = orig, 1500);
         });
     }
-    </script>
+</script>
 </body>
 </html>
